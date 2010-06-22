@@ -110,10 +110,13 @@ class relay:
                     self.error("skipping %s" % hex)
                     continue
 
-                self.notify(text)
-                self.seen[hex] = int(time.time())
+                try:
+                    self.notify(text)
+                    count_new += 1
+                except Exception, e:
+                    self.error('failed to notify: %s' % )
 
-                count_new += 1
+                self.seen[hex] = int(time.time())
 
         if count_new:
             self.write_seen(self.localstore, self.seen)
