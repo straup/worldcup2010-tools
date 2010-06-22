@@ -1,0 +1,22 @@
+These are a series of CLI tools for stuff involving the 2010 World Cup.
+
+* guardian_monitor.pl
+
+  This is a Perl script to poll the Guardian API for current World Cup football
+  matches that are being live-blogged, to fetch the posts themselves are store
+  them as big JSON file.
+
+* guardian_relay.py
+
+  This is a Python script that reads said JSON file (assumed to be a remote URL)
+  and to relay new updates via XMPP (specifically GTalk).
+
+  If run on an Android phone with the Android Scripting Extensions app, then it
+  will also relay updates to the phone's notification system (although, the
+  updates themselves are usually too long to make it worthwhile).
+
+See also:
+
+http://www.aaronland.info/weblog/2006/06/12/areacode/#ole
+
+http://www.guardian.co.uk/football/worldcup2010
